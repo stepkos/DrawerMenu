@@ -10,6 +10,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.annotation.SuppressLint;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -58,8 +59,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.home:
-                Log.i("test", "imasadsa");
-                Toast.makeText(this, "sieam", Toast.LENGTH_SHORT).show();
                 getSupportFragmentManager().beginTransaction().replace(R.id.Fragment_container, new HomeFragment()).commit();
                 break;
             case R.id.integral_rec:
@@ -72,17 +71,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.Fragment_container, new SimsonFragment()).commit();
                 break;
             case R.id.sinus:
-                Toast.makeText(this, "clicked sinus", Toast.LENGTH_SHORT).show();
-                Log.i("test", "sinus clicked");
-                DrawSinus drawSinus = new DrawSinus(this);
-//                getSupportFragmentManager().beginTransaction().replace(R.id.Fragment_container, drawSinus);
-                setContentView(drawSinus);
+                startActivity(new Intent(this, SinusActivity.class));
                 break;
             case R.id.tangens:
-                Toast.makeText(this, "clicked tangens", Toast.LENGTH_SHORT).show();
-                Log.i("test", "tangens clicked");
-                DrawTangens drawTangens = new DrawTangens(this);
-                setContentView(drawTangens);
+                startActivity(new Intent(this, TangensActivity.class));
                 break;
         }
 

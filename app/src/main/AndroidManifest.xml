@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DrawerMenu2">
         <activity
+            android:name=".TangensActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SinusActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
