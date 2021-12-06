@@ -57,6 +57,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
+            case R.id.home:
+                Log.i("test", "imasadsa");
+                Toast.makeText(this, "sieam", Toast.LENGTH_SHORT).show();
+                getSupportFragmentManager().beginTransaction().replace(R.id.Fragment_container, new HomeFragment()).commit();
+                break;
+            case R.id.integral_rec:
+                getSupportFragmentManager().beginTransaction().replace(R.id.Fragment_container, new RectangleFragment()).commit();
+                break;
+            case R.id.integral_trapeze:
+                getSupportFragmentManager().beginTransaction().replace(R.id.Fragment_container, new TrapezeFragment()).commit();
+                break;
+            case R.id.integral_simpson:
+                getSupportFragmentManager().beginTransaction().replace(R.id.Fragment_container, new SimsonFragment()).commit();
+                break;
             case R.id.sinus:
                 Toast.makeText(this, "clicked sinus", Toast.LENGTH_SHORT).show();
                 Log.i("test", "sinus clicked");
