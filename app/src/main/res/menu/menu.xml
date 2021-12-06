@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/ic_1"
+            android:title="Home" />
+        <item
+            android:id="@+id/integral_rec"
+            android:icon="@drawable/ic_2"
+            android:title="Integral Rec" />
+        <item
+            android:id="@+id/integral_trapeze"
+            android:icon="@drawable/ic_3"
+            android:title="Integral Trapeze" />
+        <item
+            android:id="@+id/integral_simpson"
+            android:icon="@drawable/ic_4"
+            android:title="Integral Simpson" />
+
+    </group>
+
+    <item android:title="Another Activity">
+
+        <menu>
+
+            <item
+                android:id="@+id/sinus"
+                android:icon="@drawable/ic_5"
+                android:title="Draw sinus" />
+
+            <item
+                android:id="@+id/tangens"
+                android:icon="@drawable/ic_6"
+                android:title="Draw tangens" />
+
+        </menu>
+
+    </item>
+
+</menu>

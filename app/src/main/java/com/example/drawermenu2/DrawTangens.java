@@ -1,0 +1,49 @@
+package com.example.drawermenu2;
+
+import android.content.Context;
+import android.content.res.Resources;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.view.View;
+
+public class DrawTangens extends View {
+
+    float Y = 150;
+    float X = 100;
+
+    float widthPixels = Resources.getSystem().getDisplayMetrics().widthPixels;
+    float heightPixels = Resources.getSystem().getDisplayMetrics().heightPixels;
+    float frequency = (float) (X * Math.PI);
+    float size = 7;
+
+    Paint paint;
+    Paint paint2;
+
+    public DrawTangens(Context context) {
+        super(context);
+    }
+
+    @Override
+    protected void onDraw(Canvas canvas) {
+        super.onDraw(canvas);
+        paintB(canvas);
+
+        for (float x = -widthPixels / 2; x <= widthPixels / 2; x += 0.1) {
+            canvas.drawPoint(x + widthPixels / 2, heightPixels / 2 - (-Y) * (float) Math.tan(-x * Math.PI / frequency), paint);
+        }
+        canvas.drawLine(0, heightPixels / 2, widthPixels, heightPixels / 2, paint2);
+        canvas.drawLine(widthPixels / 2, 0, widthPixels / 2, heightPixels, paint2);
+    }
+
+    public void paintB(Canvas canvas) {
+        paint = new Paint();
+        paint.setColor(Color.rgb(100, 0, 200));
+        paint.setStrokeWidth(size);
+
+        paint2 = new Paint();
+        paint2.setColor(Color.rgb(100, 100, 100));
+        paint2.setStrokeWidth(3);
+    }
+
+}
