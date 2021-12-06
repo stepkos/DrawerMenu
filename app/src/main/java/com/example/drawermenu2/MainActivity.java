@@ -78,7 +78,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
         }
 
-        return false;
+        drawerLayout.closeDrawer(GravityCompat.START);
+        return true;
     }
 
     @Override
