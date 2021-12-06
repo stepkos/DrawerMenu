@@ -7,7 +7,11 @@
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.32135416666666666" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.32135416666666666" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/home_fragment.xml" value="0.14311043566362716" />
         <entry key="app/src/main/res/layout/nav_header.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/rectangle_fragment.xml" value="0.14311043566362716" />
+        <entry key="app/src/main/res/layout/simpson_fragment.xml" value="0.14311043566362716" />
+        <entry key="app/src/main/res/layout/trapeze_fragment.xml" value="0.14311043566362716" />
         <entry key="app/src/main/res/menu/menu.xml" value="0.1" />
       </map>
     </option>
