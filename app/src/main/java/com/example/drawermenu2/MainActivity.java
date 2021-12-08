@@ -91,21 +91,4 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             super.onBackPressed();
     }
 
-    // formularz pobiera x1, x2
-    protected double methodRectangle(double a, double b) {
-        double h = (b-a) / rectPrecision;
-        double s;
-        double pole = 0;
-        for (int i=0; i<rectPrecision; i++) {
-            s = a*h*i+h/2;
-            pole += Math.abs(f(s));
-        }
-
-        return h*pole;
-    }
-
-    protected double f(double x) {
-        return Math.sin(x);
-    }
-
 }

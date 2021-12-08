@@ -1,6 +1,7 @@
 package com.example.drawermenu2;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -38,13 +39,24 @@ public class RectangleFragment extends Fragment {
         calculateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                double a = Double.parseDouble(String.valueOf(rangeA.getText()));
-                double b = Double.parseDouble(String.valueOf(rangeB.getText()));
-                double p = Double.parseDouble(String.valueOf(precision.getText()));
-                Toast.makeText(getActivity(), "RectangleFragment"+" a="+a+" b="+b+" prcision="+p, Toast.LENGTH_LONG).show();
-                Log.v(TAG,"RectangleFragment"+" a="+a+" b="+b+" prcision="+p);
-                double r = methodRectangle(a,b,p);
-                result.setText(String.valueOf(r));
+                if(TextUtils.isEmpty(rangeA.getText()) || !isNumeric(rangeA.getText().toString())) {
+                    rangeA.setError("Field is required and filed must be numeric!");
+                }
+                else if(TextUtils.isEmpty(rangeB.getText()) || !isNumeric(rangeB.getText().toString())) {
+                    rangeB.setError("Field is required and filed must be numeric!");
+                }
+                else if(TextUtils.isEmpty(precision.getText()) || !isNumeric(precision.getText().toString())) {
+                    precision.setError("Field is required and filed must be numeric!");
+                }
+                else {
+                    double a = Double.parseDouble(String.valueOf(rangeA.getText()));
+                    double b = Double.parseDouble(String.valueOf(rangeB.getText()));
+                    double p = Double.parseDouble(String.valueOf(precision.getText()));
+                    Toast.makeText(getActivity(), "RectangleFragment"+" a="+a+" b="+b+" prcision="+p, Toast.LENGTH_LONG).show();
+                    Log.v(TAG,"RectangleFragment"+" a="+a+" b="+b+" prcision="+p);
+                    double r = methodRectangle(a,b,p);
+                    result.setText(String.valueOf(r));
+                }
             }
         });
 
@@ -67,5 +79,9 @@ public class RectangleFragment extends Fragment {
 
     double f(double x) {
         return Math.sin(x);
+    }
+
+    public static boolean isNumeric(String str) {
+        return str.matches("-?\\d+(\\.\\d+)?");
     }
 }
