@@ -8,12 +8,112 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
         android:textSize="25sp"
         android:text="Rectangle fragment"
         android:textColor="@color/white"
-    >
-        
-    </TextView>
+    />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="200dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Value A:"
+            android:textSize="18sp"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextA"
+            android:hint="Write value"
+            android:layout_marginLeft="10dp"
+            android:background="@color/white"
+            android:padding="3dp"
+            android:textSize="18sp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="250dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Value B:"
+            android:textSize="18sp"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextB"
+            android:hint="Write value"
+            android:layout_marginLeft="10dp"
+            android:background="@color/white"
+            android:padding="3dp"
+            android:textSize="18sp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="300dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Precision:"
+            android:textSize="18sp"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/precision"
+            android:hint="Write value"
+            android:layout_marginLeft="10dp"
+            android:background="@color/white"
+            android:padding="3dp"
+            android:textSize="18sp"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/calculate"
+        android:text="Calculate"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="370dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/result"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="450dp"
+        android:textSize="30sp"
+        android:text=""
+        />
 
 </RelativeLayout>
