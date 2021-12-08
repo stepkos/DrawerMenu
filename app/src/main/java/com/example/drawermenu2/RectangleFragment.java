@@ -19,17 +19,16 @@ public class RectangleFragment extends Fragment {
     final static String TAG = "Rectangle";
     View view;
     Button calculateButton;
-    //long n = 1000000;
     EditText rangeA;
     EditText rangeB;
     EditText precision;
     TextView result;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull  LayoutInflater inflater, @Nullable  ViewGroup container, @Nullable  Bundle savedInstanceState) {
-        // Inflate the layout
         view = inflater.inflate(R.layout.rectangle_fragment, container, false);
-        // get the reference of widgets
+
         rangeA = view.findViewById(R.id.editTextA);
         rangeB = view.findViewById(R.id.editTextB);
         precision = view.findViewById(R.id.precision);
@@ -53,9 +52,6 @@ public class RectangleFragment extends Fragment {
 
     }
 
-    /**
-     * Method integral rectangle
-     */
     double methodRectangle(double a, double b, double n){
         double h=(b-a)/n;
         double s;
@@ -69,7 +65,6 @@ public class RectangleFragment extends Fragment {
         return h*pole;
     }
 
-    // --------- funkcje -------------
     double f(double x) {
         return Math.sin(x);
     }
